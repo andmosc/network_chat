@@ -1,3 +1,6 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.text.SimpleDateFormat;
@@ -6,6 +9,8 @@ import java.util.Date;
 import java.util.List;
 
 public class ServerChat implements TCPConnectionListener {
+
+    private final static Logger logger = LoggerFactory.getLogger(ServerChat.class);
 
     public static void main(String[] args) {
         new ServerChat();
@@ -22,13 +27,14 @@ public class ServerChat implements TCPConnectionListener {
         getSettingServer();
         history = new TCPHistory();
         try (ServerSocket serverSocket = new ServerSocket(port)) {
+            logger.debug("Server running!");
             System.out.println("Server running!");
             while (true) {
                 try {
-                    new TCPConnection(serverSocket.accept(), this);
+                    logger.debug("new connection: {}", new TCPConnection(serverSocket.accept(), this));
                 } catch (IOException e) {
                     System.out.println("TCP exception: " + e);
-                    //todo ошибка по соединению
+                    logger.error("TCP exception: ", e);
                 }
             }
         } catch (IOException e) {
@@ -39,6 +45,7 @@ public class ServerChat implements TCPConnectionListener {
     private void getSettingServer() {
         TCPGetSetting getSetting = new TCPGetSetting(FILE_SETTING_PATH);
         port = Integer.parseInt(getSetting.getValue("SERVER_PORT"));
+        logger.debug("received server settings, port: {}", port);
     }
 
     private void sentToAllConnections(String value) {
@@ -53,9 +60,9 @@ public class ServerChat implements TCPConnectionListener {
                 .append(value));
 
         System.out.println(str);
+        logger.info(value);
         history.addStory(str);
         connectionList.forEach(TCP -> TCP.sendMsg(str));
-        //todo добавить в лог всю переписку
     }
 
     @Override
@@ -63,7 +70,6 @@ public class ServerChat implements TCPConnectionListener {
         connectionList.add(tcpConnection);
         System.out.println("Client connected: " + tcpConnection);
         history.printHistory(tcpConnection.getOut());
-        //todo добавить в лог Client connected:
     }
 
 
@@ -79,13 +85,13 @@ public class ServerChat implements TCPConnectionListener {
     @Override
     public void onDisconnect(TCPConnection tcpConnection) {
         System.out.println("Client disconnect: " + tcpConnection);
+        logger.info("Client disconnect: {}", tcpConnection);
         connectionList.remove(tcpConnection);
-        //todo добавить информацию в лог Client disconnect:
     }
 
     @Override
     public void onException(TCPConnection tcpConnection, Exception e) {
         System.out.println("TCP exception: " + e);
-        //todo добавить об ошибках в лог
+        logger.error("TCP exception: ", e);
     }
 }

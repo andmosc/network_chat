@@ -1,0 +1,25 @@
+2022-11-18 01:58:58  [DEBUG] - server ip address: 127.0.0.1, port: 8080
+2022-11-18 01:59:05  [DEBUG] - user entered nickname: Максим
+2022-11-18 01:59:05  [DEBUG] - sending a message to the server -> new user: Максим
+2022-11-18 01:59:05  [DEBUG] - connecting to the server: connection: /127.0.0.1 : 8080
+2022-11-18 01:59:05  [INFO ] - [01:59:05] new user: Максим
+2022-11-18 01:59:15  [INFO ] - [01:59:15] Максим: Привет всем, я Максим
+2022-11-18 01:59:21  [DEBUG] - server ip address: 127.0.0.1, port: 8080
+2022-11-18 01:59:30  [DEBUG] - user entered nickname: Вася
+2022-11-18 01:59:30  [DEBUG] - sending a message to the server -> new user: Вася
+2022-11-18 01:59:30  [INFO ] - [01:59:30] new user: Вася
+2022-11-18 01:59:30  [INFO ] - History message: 
+2022-11-18 01:59:30  [INFO ] - Story: [01:59:05] new user: Максим
+2022-11-18 01:59:30  [INFO ] - Story: [01:59:15] Максим: Привет всем, я Максим
+2022-11-18 01:59:30  [INFO ] - ----- end history -----
+2022-11-18 01:59:30  [INFO ] - [01:59:30] new user: Вася
+2022-11-18 01:59:30  [DEBUG] - connecting to the server: connection: /127.0.0.1 : 8080
+2022-11-18 01:59:46  [INFO ] - [01:59:46] Вася: Привет Максим, как твои дела?
+2022-11-18 01:59:46  [INFO ] - [01:59:46] Вася: Привет Максим, как твои дела?
+2022-11-18 01:59:52  [INFO ] - user:(Максим) disconnected
+2022-11-18 01:59:52  [INFO ] - [01:59:52] user: (Максим) disconnect
+2022-11-18 01:59:52  [DEBUG] - Connection close
+2022-11-18 01:59:52  [INFO ] - [01:59:52] user: (Максим) disconnect
+2022-11-18 01:59:59  [INFO ] - user:(Вася) disconnected
+2022-11-18 01:59:59  [INFO ] - [01:59:59] user: (Вася) disconnect
+2022-11-18 01:59:59  [DEBUG] - Connection close

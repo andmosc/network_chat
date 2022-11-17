@@ -28,9 +28,15 @@ public class TCPConnection {
                     eventListener.onReceiveStrings(TCPConnection.this, in.readLine());
                 }
             } catch (IOException e) {
+                Thread.currentThread().interrupt();
                 eventListener.onException(TCPConnection.this, e);
             } finally {
                 eventListener.onDisconnect(TCPConnection.this);
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    eventListener.onException(TCPConnection.this, e);
+                }
             }
         });
         thread.start();
@@ -48,11 +54,6 @@ public class TCPConnection {
 
     public synchronized void disconnect() {
         thread.interrupt();
-        try {
-            socket.close();
-        } catch (IOException e) {
-            eventListener.onException(TCPConnection.this, e);
-        }
     }
 
     @Override

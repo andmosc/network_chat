@@ -1,0 +1,12 @@
+2022-11-18 01:58:53  [DEBUG] - received server settings, port: 8080
+2022-11-18 01:58:53  [DEBUG] - Server running!
+2022-11-18 01:59:05  [DEBUG] - new connection: connection: /127.0.0.1 : 59453
+2022-11-18 01:59:05  [INFO ] - new user: Максим
+2022-11-18 01:59:15  [INFO ] - Максим: Привет всем, я Максим
+2022-11-18 01:59:30  [DEBUG] - new connection: connection: /127.0.0.1 : 59460
+2022-11-18 01:59:30  [INFO ] - new user: Вася
+2022-11-18 01:59:46  [INFO ] - Вася: Привет Максим, как твои дела?
+2022-11-18 01:59:52  [INFO ] - user: (Максим) disconnect
+2022-11-18 01:59:52  [INFO ] - Client disconnect: connection: /127.0.0.1 : 59453
+2022-11-18 01:59:59  [INFO ] - user: (Вася) disconnect
+2022-11-18 01:59:59  [INFO ] - Client disconnect: connection: /127.0.0.1 : 59460

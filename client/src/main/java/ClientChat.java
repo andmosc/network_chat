@@ -1,8 +1,13 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class ClientChat implements TCPConnectionListener {
+
+    private final static Logger logger = LoggerFactory.getLogger(ClientChat.class);
 
     public static void main(String[] args) {
         new ClientChat();
@@ -21,18 +26,23 @@ public class ClientChat implements TCPConnectionListener {
         getSetting = new TCPGetSetting(FILE_SETTING_PATH);
         IP_ADDR = getSetting.getValue("SERVER_HOST");
         PORT = Integer.parseInt(getSetting.getValue("SERVER_PORT"));
+        logger.debug("server ip address: {}, port: {}", IP_ADDR, PORT);
 
         inputUser = new BufferedReader(new InputStreamReader(System.in));
 
         inputNickname();
+        logger.debug("user entered nickname: {}", nickname);
+
         String msg;
         try {
             connection = new TCPConnection(IP_ADDR, PORT, this);
+            logger.debug("connecting to the server: {}", connection);
             while (true) {
                 try {
                     msg = inputUser.readLine();
                     if (msg.equals("exit")) {
                         connection.sendMsg("user: (" + nickname + ") disconnect");
+                        logger.info("user:({}) disconnected", nickname);
                         connection.sendMsg(msg);
                         connection.disconnect();
                         break;
@@ -40,11 +50,12 @@ public class ClientChat implements TCPConnectionListener {
                     connection.sendMsg(nickname + ": " + msg);
                 } catch (IOException e) {
                     connection.disconnect();
+                    logger.error("inputUser.readLine()", e);
                 }
             }
         } catch (IOException e) {
             connection.disconnect();
-            //todo добавить в лог ошибку соединения
+            logger.error("new TCPConnection", e);
         }
     }
 
@@ -56,30 +67,29 @@ public class ClientChat implements TCPConnectionListener {
             } while (nickname.equals(""));
         } catch (IOException e) {
             throw new RuntimeException(e);
-            //todo добавить в лог
         }
     }
 
     @Override
     public void onConnectionReady(TCPConnection tcpConnection) {
         connection.sendMsg("new user: " + nickname);
-        //todo добавить в лог
+        logger.debug("sending a message to the server -> new user: {}", nickname);
     }
 
     @Override
     public void onReceiveStrings(TCPConnection tcpConnection, String value) {
         System.out.println(value);
-        //todo добавить в лог переписку
+        logger.info(value);
     }
 
     @Override
     public void onDisconnect(TCPConnection tcpConnection) {
         System.out.println("Connection close");
-        //todo добавить в лог о выходе
+        logger.debug("Connection close");
     }
 
     @Override
     public void onException(TCPConnection tcpConnection, Exception e) {
-        //todo добавить в лог ошибку
+        logger.error("onException: ",e);
     }
 }
