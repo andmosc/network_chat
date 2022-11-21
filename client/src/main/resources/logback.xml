@@ -4,13 +4,13 @@
         <file>client/logs/client.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>client/logs/archived/app.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <fileNamePattern>client/logs/archived/app.%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
              <maxFileSize>1MB</maxFileSize>
             <totalSizeCap>5MB</totalSizeCap>
             <maxHistory>60</maxHistory>
         </rollingPolicy>
 
-        <encoder>
+         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss}  [%-5level] - %msg%n</pattern>
         </encoder>
     </appender>

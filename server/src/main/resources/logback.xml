@@ -4,7 +4,7 @@
         <file>server/logs/server.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>server/logs/archived/app.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <fileNamePattern>server/logs/archived/app.%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
              <maxFileSize>1MB</maxFileSize>
             <totalSizeCap>5MB</totalSizeCap>
             <maxHistory>60</maxHistory>

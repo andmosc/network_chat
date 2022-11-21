@@ -3,17 +3,17 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class TCPGetSetting {
-    private FileReader file;
+
     Properties properties;
-    private String pathToFile;
 
     public TCPGetSetting(String pathToFile) {
+        final FileReader file;
         try {
             file = new FileReader(pathToFile);
             properties = new Properties();
             properties.load(file);
         } catch (IOException e) {
-            //todo информацию в лог об ошибки
+            throw new RuntimeException(e);
         }
     }
 

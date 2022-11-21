@@ -1,12 +1,17 @@
-2022-11-18 01:58:53  [DEBUG] - received server settings, port: 8080
-2022-11-18 01:58:53  [DEBUG] - Server running!
-2022-11-18 01:59:05  [DEBUG] - new connection: connection: /127.0.0.1 : 59453
-2022-11-18 01:59:05  [INFO ] - new user: Максим
-2022-11-18 01:59:15  [INFO ] - Максим: Привет всем, я Максим
-2022-11-18 01:59:30  [DEBUG] - new connection: connection: /127.0.0.1 : 59460
-2022-11-18 01:59:30  [INFO ] - new user: Вася
-2022-11-18 01:59:46  [INFO ] - Вася: Привет Максим, как твои дела?
-2022-11-18 01:59:52  [INFO ] - user: (Максим) disconnect
-2022-11-18 01:59:52  [INFO ] - Client disconnect: connection: /127.0.0.1 : 59453
-2022-11-18 01:59:59  [INFO ] - user: (Вася) disconnect
-2022-11-18 01:59:59  [INFO ] - Client disconnect: connection: /127.0.0.1 : 59460
+2022-11-21 15:43:55  [DEBUG] - received server settings, port: 8080
+2022-11-21 15:43:55  [DEBUG] - Server running!
+2022-11-21 15:44:10  [DEBUG] - new connection: connection: /127.0.0.1 : 55017
+2022-11-21 15:44:10  [INFO ] - new user: Максим
+2022-11-21 15:44:23  [DEBUG] - new connection: connection: /127.0.0.1 : 55025
+2022-11-21 15:44:23  [INFO ] - new user: Александр
+2022-11-21 15:45:17  [INFO ] - Максим: Всем привет я Максим
+2022-11-21 15:45:35  [INFO ] - Александр: Привет Максим, я Александр
+2022-11-21 15:45:44  [DEBUG] - new connection: connection: /127.0.0.1 : 55043
+2022-11-21 15:45:44  [INFO ] - new user: Виталя
+2022-11-21 15:45:55  [INFO ] - Виталя: Всем привет
+2022-11-21 15:46:04  [INFO ] - user: (Максим) disconnect
+2022-11-21 15:46:04  [INFO ] - Client disconnect: connection: /127.0.0.1 : 55017
+2022-11-21 15:46:10  [INFO ] - user: (Виталя) disconnect
+2022-11-21 15:46:10  [INFO ] - Client disconnect: connection: /127.0.0.1 : 55043
+2022-11-21 15:46:15  [INFO ] - user: (Александр) disconnect
+2022-11-21 15:46:15  [INFO ] - Client disconnect: connection: /127.0.0.1 : 55025

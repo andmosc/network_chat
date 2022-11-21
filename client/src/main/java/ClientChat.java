@@ -26,7 +26,7 @@ public class ClientChat implements TCPConnectionListener {
         getSetting = new TCPGetSetting(FILE_SETTING_PATH);
         IP_ADDR = getSetting.getValue("SERVER_HOST");
         PORT = Integer.parseInt(getSetting.getValue("SERVER_PORT"));
-        logger.debug("server ip address: {}, port: {}", IP_ADDR, PORT);
+        logger.debug("getting settings from a file: {}, port: {}", IP_ADDR, PORT);
 
         inputUser = new BufferedReader(new InputStreamReader(System.in));
 
@@ -90,6 +90,7 @@ public class ClientChat implements TCPConnectionListener {
 
     @Override
     public void onException(TCPConnection tcpConnection, Exception e) {
+        System.out.println("onException: " + e);
         logger.error("onException: ",e);
     }
 }

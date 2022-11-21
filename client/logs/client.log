@@ -1,25 +1,47 @@
-2022-11-18 01:58:58  [DEBUG] - server ip address: 127.0.0.1, port: 8080
-2022-11-18 01:59:05  [DEBUG] - user entered nickname: Максим
-2022-11-18 01:59:05  [DEBUG] - sending a message to the server -> new user: Максим
-2022-11-18 01:59:05  [DEBUG] - connecting to the server: connection: /127.0.0.1 : 8080
-2022-11-18 01:59:05  [INFO ] - [01:59:05] new user: Максим
-2022-11-18 01:59:15  [INFO ] - [01:59:15] Максим: Привет всем, я Максим
-2022-11-18 01:59:21  [DEBUG] - server ip address: 127.0.0.1, port: 8080
-2022-11-18 01:59:30  [DEBUG] - user entered nickname: Вася
-2022-11-18 01:59:30  [DEBUG] - sending a message to the server -> new user: Вася
-2022-11-18 01:59:30  [INFO ] - [01:59:30] new user: Вася
-2022-11-18 01:59:30  [INFO ] - History message: 
-2022-11-18 01:59:30  [INFO ] - Story: [01:59:05] new user: Максим
-2022-11-18 01:59:30  [INFO ] - Story: [01:59:15] Максим: Привет всем, я Максим
-2022-11-18 01:59:30  [INFO ] - ----- end history -----
-2022-11-18 01:59:30  [INFO ] - [01:59:30] new user: Вася
-2022-11-18 01:59:30  [DEBUG] - connecting to the server: connection: /127.0.0.1 : 8080
-2022-11-18 01:59:46  [INFO ] - [01:59:46] Вася: Привет Максим, как твои дела?
-2022-11-18 01:59:46  [INFO ] - [01:59:46] Вася: Привет Максим, как твои дела?
-2022-11-18 01:59:52  [INFO ] - user:(Максим) disconnected
-2022-11-18 01:59:52  [INFO ] - [01:59:52] user: (Максим) disconnect
-2022-11-18 01:59:52  [DEBUG] - Connection close
-2022-11-18 01:59:52  [INFO ] - [01:59:52] user: (Максим) disconnect
-2022-11-18 01:59:59  [INFO ] - user:(Вася) disconnected
-2022-11-18 01:59:59  [INFO ] - [01:59:59] user: (Вася) disconnect
-2022-11-18 01:59:59  [DEBUG] - Connection close
+2022-11-21 02:50:30  [DEBUG] - getting settings from a file: 127.0.0.1, port: 8080
+2022-11-21 15:44:05  [DEBUG] - getting settings from a file: 127.0.0.1, port: 8080
+2022-11-21 15:44:10  [DEBUG] - user entered nickname: Максим
+2022-11-21 15:44:10  [DEBUG] - sending a message to the server -> new user: Максим
+2022-11-21 15:44:10  [DEBUG] - connecting to the server: connection: /127.0.0.1 : 8080
+2022-11-21 15:44:10  [INFO ] - [15:44:10] new user: Максим
+2022-11-21 15:44:16  [DEBUG] - getting settings from a file: 127.0.0.1, port: 8080
+2022-11-21 15:44:23  [DEBUG] - user entered nickname: Александр
+2022-11-21 15:44:23  [DEBUG] - sending a message to the server -> new user: Александр
+2022-11-21 15:44:23  [INFO ] - [15:44:23] new user: Александр
+2022-11-21 15:44:23  [INFO ] - History message: 
+2022-11-21 15:44:23  [DEBUG] - connecting to the server: connection: /127.0.0.1 : 8080
+2022-11-21 15:44:23  [INFO ] - Story: [15:44:10] new user: Максим
+2022-11-21 15:44:23  [INFO ] - ----- end history -----
+2022-11-21 15:44:23  [INFO ] - [15:44:23] new user: Александр
+2022-11-21 15:45:17  [INFO ] - [15:45:17] Максим: Всем привет я Максим
+2022-11-21 15:45:17  [INFO ] - [15:45:17] Максим: Всем привет я Максим
+2022-11-21 15:45:35  [INFO ] - [15:45:35] Александр: Привет Максим, я Александр
+2022-11-21 15:45:35  [INFO ] - [15:45:35] Александр: Привет Максим, я Александр
+2022-11-21 15:45:41  [DEBUG] - getting settings from a file: 127.0.0.1, port: 8080
+2022-11-21 15:45:44  [DEBUG] - user entered nickname: Виталя
+2022-11-21 15:45:44  [DEBUG] - sending a message to the server -> new user: Виталя
+2022-11-21 15:45:44  [INFO ] - [15:45:44] new user: Виталя
+2022-11-21 15:45:44  [INFO ] - [15:45:44] new user: Виталя
+2022-11-21 15:45:44  [INFO ] - History message: 
+2022-11-21 15:45:44  [INFO ] - Story: [15:44:10] new user: Максим
+2022-11-21 15:45:44  [INFO ] - Story: [15:44:23] new user: Александр
+2022-11-21 15:45:44  [INFO ] - Story: [15:45:17] Максим: Всем привет я Максим
+2022-11-21 15:45:44  [INFO ] - Story: [15:45:35] Александр: Привет Максим, я Александр
+2022-11-21 15:45:44  [DEBUG] - connecting to the server: connection: /127.0.0.1 : 8080
+2022-11-21 15:45:44  [INFO ] - ----- end history -----
+2022-11-21 15:45:44  [INFO ] - [15:45:44] new user: Виталя
+2022-11-21 15:45:55  [INFO ] - [15:45:55] Виталя: Всем привет
+2022-11-21 15:45:55  [INFO ] - [15:45:55] Виталя: Всем привет
+2022-11-21 15:45:55  [INFO ] - [15:45:55] Виталя: Всем привет
+2022-11-21 15:46:04  [INFO ] - user:(Максим) disconnected
+2022-11-21 15:46:04  [INFO ] - [15:46:04] user: (Максим) disconnect
+2022-11-21 15:46:04  [DEBUG] - Connection close
+2022-11-21 15:46:04  [INFO ] - [15:46:04] user: (Максим) disconnect
+2022-11-21 15:46:04  [INFO ] - [15:46:04] user: (Максим) disconnect
+2022-11-21 15:46:10  [INFO ] - user:(Виталя) disconnected
+2022-11-21 15:46:10  [INFO ] - [15:46:10] user: (Виталя) disconnect
+2022-11-21 15:46:10  [INFO ] - [15:46:10] user: (Виталя) disconnect
+2022-11-21 15:46:10  [DEBUG] - Connection close
+2022-11-21 15:46:15  [INFO ] - user:(Александр) disconnected
+2022-11-21 15:46:15  [INFO ] - [15:46:15] user: (Александр) disconnect
+2022-11-21 15:46:15  [DEBUG] - Connection close

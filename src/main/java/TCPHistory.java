@@ -4,17 +4,16 @@ import java.util.LinkedList;
 
 public class TCPHistory {
 
-    private static final int SIZE_LIST = 10;
+    private static final int CAPACITY = 10;
     private static final LinkedList<String> listHistory = new LinkedList<>();
 
-    public synchronized String addStory(String msg) {
-        if (listHistory.size() > SIZE_LIST) {
+    public synchronized void addStory(String msg) {
+        if (listHistory.size() > CAPACITY) {
             listHistory.removeFirst();
         }
         if (!msg.equals("exit")) {
             listHistory.add(msg);
         }
-        return msg;
     }
 
     public synchronized void printHistory(BufferedWriter out) {
@@ -27,6 +26,7 @@ public class TCPHistory {
                 out.write("----- end history -----" + "\n");
                 out.flush();
             } catch (IOException e) {
+                throw new RuntimeException(e);
             }
         }
     }

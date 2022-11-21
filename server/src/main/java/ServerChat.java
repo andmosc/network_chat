@@ -29,7 +29,7 @@ public class ServerChat implements TCPConnectionListener {
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             logger.debug("Server running!");
             System.out.println("Server running!");
-            while (true) {
+            while(true) {
                 try {
                     logger.debug("new connection: {}", new TCPConnection(serverSocket.accept(), this));
                 } catch (IOException e) {
@@ -38,7 +38,7 @@ public class ServerChat implements TCPConnectionListener {
                 }
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            logger.error("serverSocket: ",new RuntimeException(e));
         }
     }
 
@@ -71,7 +71,6 @@ public class ServerChat implements TCPConnectionListener {
         System.out.println("Client connected: " + tcpConnection);
         history.printHistory(tcpConnection.getOut());
     }
-
 
     @Override
     public void onReceiveStrings(TCPConnection tcpConnection, String value) {
